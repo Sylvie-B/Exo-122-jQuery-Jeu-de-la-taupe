@@ -35,7 +35,7 @@ function startGame (){
     //  end game
     setTimeout(function (){
         clearInterval(inter);
-        alert('vous avez marqué :' + touch + 'point');
+        alert('Votre score est de :' + touch);
         scoreBoard.text(0);
     }, 10000)
 }
