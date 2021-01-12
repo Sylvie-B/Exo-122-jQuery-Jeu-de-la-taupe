@@ -58,12 +58,15 @@ h1 {
   background: url('mole.svg') bottom center no-repeat;
   background-size: 60%;
   position: absolute;
-  top: 100%;
   width: 100%;
   height: 100%;
   transition:all 0.4s;
 }
 
-.hole.up .mole {
+.down {
+  top: 100%;
+}
+
+.up {
   top: 0;
 }
