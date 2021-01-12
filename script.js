@@ -9,7 +9,6 @@ const moles = $('.mole');
 // button
 $('button').click(startGame);
 
-
 function startGame (){
 
     let inter = setInterval(function (){
@@ -26,12 +25,18 @@ function startGame (){
 
     }, 1200)
 
-    // click --> down
+    // point for click
     let touch = 0;
     moles.click(function (){
-        $(this).removeClass('up');
         touch ++;
-        scoreBoard.text(touch)
+        scoreBoard.text(touch);
     })
+
+    //  end game
+    setTimeout(function (){
+        clearInterval(inter);
+        alert('vous avez marqué :' + touch + 'point');
+        scoreBoard.text(0);
+    }, 10000)
 }
 
